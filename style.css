@@ -1,0 +1,23 @@
+:root {
+  --width: 60px;
+  --shadow-position-positive: calc((var(--width) / 2) + 0.5px);
+  --shadow-position-negative: calc((var(--width) / 2) * -1);
+}
+div {
+  width: var(--width);
+  aspect-ratio: 1 / 1;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  background-color: #787878;
+  box-shadow: 
+    var(--shadow-position-negative) var(--shadow-position-positive) 0px 0px #3ca1f2,
+    var(--shadow-position-positive) var(--shadow-position-positive) 0px 0px #f8bb00,
+    var(--shadow-position-negative) var(--shadow-position-negative) 0px 0px#eb5514,
+    var(--shadow-position-positive) var(--shadow-position-negative) 0px 0px#83ba00;
+}
